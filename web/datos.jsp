@@ -19,13 +19,15 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <%!
+            //Comentario 1
             String user, pass, name, last, fecha, direc, correo, sexo;
             %>
         <%
             HttpSession ss = request.getSession();
             if (ss.getAttribute("txtUsuario")==null && ss.getAttribute("txtPass")==null){
-            out.print("ERROR: NO SE HA INICIADO SESION");%>
+            out.print("ERROR: La sesion no ha sido iniciada");%>
             <br><a href="index.jsp">Iniciar sesion</a>
         <%
         }else{
